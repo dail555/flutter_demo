@@ -32,32 +32,18 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text("Wichaivit App"),
       ),
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(
-              "Wichaivit Pattaramongkolchai",
-              style: TextStyle(fontSize: 18),
-            ),
-            Text(
-              number.toString(),
-              style: TextStyle(fontSize: 45, color: Colors.blue),
-            ),
-            Text(
-              "กดปุ่มเพื่อเพิ่มจำนวน",
-              style: TextStyle(fontSize: 14, color: Colors.blue),
-            ),
-          ],
+        child: ListView(
+          children: getData(5),
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          setState(() {
-            number++;
-          });
-        },
-        child: Icon(Icons.add),
-      ),
     );
+  }
+
+  List<Widget> getData(int count) {
+    List<Widget> data = [];
+    for (var i = 0; i < count; i++) {
+      data.add(Text("รายการที่ ${i + 1}"));
+    }
+    return data;
   }
 }
