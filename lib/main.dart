@@ -23,30 +23,37 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  int number = 0;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: Text("Wichaivit App"),
+      appBar: AppBar(
+        title: Text("Wichaivit App"),
+      ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              "Wichaivit Pattaramongkolchai",
+              style: TextStyle(fontSize: 18),
+            ),
+            Text(
+              number.toString(),
+              style: TextStyle(fontSize: 45, color: Colors.blue),
+            ),
+            Text(
+              "กดปุ่มเพื่อเพิ่มจำนวน",
+              style: TextStyle(fontSize: 14, color: Colors.blue),
+            ),
+          ],
         ),
-        body: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text(
-                "Wichaivit Pattaramongkolchai",
-                style: TextStyle(fontSize: 18),
-              ),
-              Text(
-                "Hello Dart",
-                style: TextStyle(fontSize: 16, color: Colors.blue),
-              ),
-              Text(
-                "Hello Flutter",
-                style: TextStyle(fontSize: 14, color: Colors.blue),
-              ),
-            ],
-          ),
-        ));
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed:() {},
+        child: Text("เพิ่ม"),
+      ),
+    );
   }
 }
