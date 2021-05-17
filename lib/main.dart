@@ -33,7 +33,7 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Center(
         child: ListView(
-          children: getData(5),
+          children: getData(20),
         ),
       ),
     );
