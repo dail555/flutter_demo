@@ -42,7 +42,8 @@ class _MyHomePageState extends State<MyHomePage> {
   List<Widget> getData(int count) {
     List<Widget> data = [];
     for (var i = 0; i < count; i++) {
-      data.add(Text("รายการที่ ${i + 1}"));
+      var menu =ListTile(title:Text("รายการที่ ${i + 1}"));
+      data.add(menu);
     }
     return data;
   }
