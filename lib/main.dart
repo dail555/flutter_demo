@@ -25,11 +25,11 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   List<FoodMenu> menu = [
-    FoodMenu('กุ้งเผา', '500'),
-    FoodMenu('กะเพราหมู', '80'),
-    FoodMenu('ข้าวผัดไข่', '55'),
-    FoodMenu('ส้มตำ', '40'),
-    FoodMenu('ผัดไท', '60'),
+    FoodMenu('กุ้งเผา', '500', 'assets/image/pic1.jpg'),
+    FoodMenu('กะเพราหมู', '80', 'assets/image/pic2.jpg'),
+    FoodMenu('ข้าวผัดไข่', '55', 'assets/image/pic3.jpg'),
+    FoodMenu('ส้มตำ', '40', 'assets/image/pic4.jpg'),
+    FoodMenu('ผัดไท', '60', 'assets/image/pic5.jpg'),
   ];
 
   @override
@@ -43,7 +43,11 @@ class _MyHomePageState extends State<MyHomePage> {
           itemBuilder: (BuildContext context, int index) {
             FoodMenu food = menu[index];
             return ListTile(
-              title: Text(food.name,style: TextStyle(fontSize:25),),
+              leading: Image.asset(food.img),
+              title: Text(
+                food.name,
+                style: TextStyle(fontSize: 25),
+              ),
               subtitle: Text("ราคา ${food.price} บาท"),
             );
           }),
