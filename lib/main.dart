@@ -16,7 +16,22 @@ class MyApp extends StatelessWidget {
             title: Text("Wichaivit App"),
           ),
           body: Center(
-            child: Text("Wichaivit Pattaramongkolchai"),
+            child: Column(
+              children: [
+                Text(
+                  "Wichaivit Pattaramongkolchai",
+                  style: TextStyle(fontSize: 18, color: Colors.blue),
+                ),
+                Text(
+                  "Hello Dart",
+                  style: TextStyle(fontSize: 16, color: Colors.blue),
+                ),
+                Text(
+                  "Hello Flutter",
+                  style: TextStyle(fontSize: 14, color: Colors.blue),
+                ),
+              ],
+            ),
           )),
       theme: ThemeData(primarySwatch: Colors.orange),
     );
