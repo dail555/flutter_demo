@@ -31,24 +31,11 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text("Wichaivit App"),
       ),
-      body: Center(
-        child: ListView(
-          children: getData(20),
-        ),
-      ),
+      body: ListView.builder(itemBuilder: (BuildContext context, int index) {
+        return ListTile(
+          title:Text("รายการที่ ${index+1}")
+        );
+      }),
     );
-  }
-
-  List<Widget> getData(int count) {
-    List<Widget> data = [];
-    for (var i = 0; i < count; i++) {
-      var menu = ListTile(
-        title: Text("รายการที่ ${i + 1}",style: TextStyle(fontSize: 20),),
-        subtitle: Text("หัวข้อย่อยที่ ${i + 1}"),
-        
-      );
-      data.add(menu);
-    }
-    return data;
   }
 }
