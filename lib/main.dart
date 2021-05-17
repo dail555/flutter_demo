@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'FoodMenu.dart';
 
@@ -30,10 +32,27 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text("บัญชีของฉัน"),
       ),
-      body: Column(
-        children: [
-
-        ],
+      body: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Column(
+          children: [
+            Container(
+              decoration: BoxDecoration(
+                  color: Colors.green, borderRadius: BorderRadius.circular(10)),
+              height: 100,
+            ),
+            Container(
+              decoration: BoxDecoration(
+                  color: Colors.blue, borderRadius: BorderRadius.circular(10)),
+              height: 100,
+            ),
+            Container(
+              decoration: BoxDecoration(
+                  color: Colors.red, borderRadius: BorderRadius.circular(10)),
+              height: 100,
+            ),
+          ],
+        ),
       ),
     );
   }
