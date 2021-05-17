@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
         ),
         body: Text("Hello"),
       ),
-      theme: ThemeData(primarySwatch: Colors.blue),
+      theme: ThemeData(primarySwatch: Colors.orange),
     );
   }
 }
