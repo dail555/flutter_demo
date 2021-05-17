@@ -12,11 +12,12 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: "My App",
       home: Scaffold(
-        appBar: AppBar(
-          title: Text("Wichaivit App"),
-        ),
-        body: Text("Wichaivit Pattaramongkolchai"),
-      ),
+          appBar: AppBar(
+            title: Text("Wichaivit App"),
+          ),
+          body: Center(
+            child: Text("Wichaivit Pattaramongkolchai"),
+          )),
       theme: ThemeData(primarySwatch: Colors.orange),
     );
   }
