@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: Text("Wichaivit App"),
         ),
-        body: Text("Hello"),
+        body: Text("Wichaivit Pattaramongkolchai"),
       ),
       theme: ThemeData(primarySwatch: Colors.orange),
     );
